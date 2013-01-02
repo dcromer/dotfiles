@@ -20,3 +20,12 @@ compinit
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
+
+# Source .nvm file
+source ~/.nvm/nvm.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#source /Users/dan/.rvm/scripts/rvm
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

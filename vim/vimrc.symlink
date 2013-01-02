@@ -83,3 +83,9 @@ function! StripWhitespace ()
     exec ':%s/ \+$//gc'
 endfunction
 map ,s :call StripWhitespace ()<CR>
+
+" ---------------------------------------------------------------------------
+" Call pathogen to load my sexy vim modules. 
+" ---------------------------------------------------------------------------
+
+call pathogen#infect()
