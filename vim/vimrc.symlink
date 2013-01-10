@@ -89,3 +89,6 @@ map ,s :call StripWhitespace ()<CR>
 " ---------------------------------------------------------------------------
 
 call pathogen#infect()
+
+" NERD tree open/close
+autocmd VimEnter * nmap <leader>3 :NERDTreeToggle<CR>
