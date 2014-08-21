@@ -1,5 +1,6 @@
 .DS_Store
 .svn
-*~
-*.swp
-*.rbc
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
