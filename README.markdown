@@ -1,4 +1,4 @@
-# NewButtermilk does dotfiles
+# dcromer does dotfiles
 
 ## dotfiles
 
@@ -13,7 +13,7 @@ Inspired by [this post](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-f
 Run this:
 
 ```sh
-git clone https://github.com/NewButtermilk/dotfiles.git ~/.dotfiles
+git clone https://github.com/dcromer/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
