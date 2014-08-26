@@ -77,7 +77,6 @@ set laststatus=2           " always show the status line
 set ignorecase             " ignore case when searching
 set visualbell             " shut the fuck up
 
-
 " ---------------------------------------------------------------------------
 "  Strip all trailing whitespace in file
 " ---------------------------------------------------------------------------
@@ -86,12 +85,6 @@ function! StripWhitespace ()
     exec ':%s/ \+$//gc'
 endfunction
 map ,s :call StripWhitespace ()<CR>
-
-" ---------------------------------------------------------------------------
-" Call pathogen to load my sexy vim modules. 
-" ---------------------------------------------------------------------------
-
-call pathogen#infect()
 
 " NERD tree open/close
 autocmd VimEnter * nmap <leader>3 :NERDTreeToggle<CR>
