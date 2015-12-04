@@ -26,8 +26,5 @@ for config_file ($ZSH/**/completion.zsh) source $config_file
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Tmuxinator completion
-source ~/.bin/tmuxinator.zsh
-
 # AWS CLI autocompletion
 source /usr/local/share/zsh/site-functions/_aws
