@@ -28,3 +28,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # AWS CLI autocompletion
 source /usr/local/share/zsh/site-functions/_aws
+
+#direnv
+eval "$(direnv hook zsh)"
+
+# DAX
+source ~/dax_aliases
