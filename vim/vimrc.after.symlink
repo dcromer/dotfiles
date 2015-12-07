@@ -89,3 +89,7 @@ map ,s :call StripWhitespace ()<CR>
 " NERD tree open/close
 autocmd VimEnter * nmap <leader>3 :NERDTreeToggle<CR>
 
+" VROOM
+nnoremap <Leader>r :VroomRunTestFile<CR>
+nnoremap <Leader>l :VroomRunLastTest<CR>
+
