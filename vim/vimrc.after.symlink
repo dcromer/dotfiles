@@ -89,6 +89,10 @@ map ,s :call StripWhitespace ()<CR>
 " NERD tree open/close
 autocmd VimEnter * nmap <leader>3 :NERDTreeToggle<CR>
 
+" Ag.vim
+let g:aghighlight=1                  " Highlight search results
+nnoremap <Leader>A :Ag <cword><CR>
+
 " VROOM
 nnoremap <Leader>r :VroomRunTestFile<CR>
 nnoremap <Leader>l :VroomRunLastTest<CR>
