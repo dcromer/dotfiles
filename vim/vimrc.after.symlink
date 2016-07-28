@@ -97,3 +97,5 @@ nnoremap <Leader>A :Ag <cword><CR>
 nnoremap <Leader>r :VroomRunTestFile<CR>
 nnoremap <Leader>l :VroomRunLastTest<CR>
 
+" Syntastic
+let g:syntastic_ruby_checkers = ["mri", "rubocop"]
