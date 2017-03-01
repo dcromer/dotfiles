@@ -95,6 +95,7 @@ nnoremap <Leader>A :Ag <cword><CR>
 
 " VROOM
 nnoremap <Leader>r :VroomRunTestFile<CR>
+nnoremap <Leader>R :VroomRunNearestTest<CR>
 nnoremap <Leader>l :VroomRunLastTest<CR>
 
 " Syntastic
