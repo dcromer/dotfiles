@@ -1,9 +1,19 @@
+" vim-plug (https://github.com/junegunn/vim-plug) settings 
+" Automatically install vim-plug and run PlugInstall if vim-plug not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source '~/.vimrc'
+endif
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
 set noswapfile
 
-" ----------------------------------------------------------------------------
-"  Text Formatting
-" ----------------------------------------------------------------------------
-
+"  Text Formatting 
 set autoindent             " automatic indent new lines
 set smartindent            " be smart about it
 inoremap # X<BS>#
@@ -14,13 +24,10 @@ set tabstop=4
 set expandtab              " expand tabs to spaces
 set nosmarttab             " fuck tabs
 set formatoptions+=n       " support for numbered/bullet lists
-"set textwidth=80           " wrap at 80 chars by default
 set virtualedit=block      " allow virtual edit in visual block ..
 :syntax on
 
-" ----------------------------------------------------------------------------
 "  Remapping
-" ----------------------------------------------------------------------------
 
 " lead with ,
 let mapleader = ","
@@ -47,10 +54,7 @@ inoremap <Up> <C-o>gk
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-" ----------------------------------------------------------------------------
 "  UI
-" ----------------------------------------------------------------------------
-
 set ruler                  " show the cursor position all the time
 set noshowcmd              " don't display incomplete commands
 set nolazyredraw           " turn off lazy redraw
@@ -65,10 +69,7 @@ set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
 
 
-" ----------------------------------------------------------------------------
 " Visual Cues
-" ----------------------------------------------------------------------------
-
 set showmatch              " brackets/braces that is
 set mat=5                  " duration to show matching brace (1/10 sec)
 set incsearch              " do incremental searching
@@ -76,10 +77,7 @@ set laststatus=2           " always show the status line
 set ignorecase             " ignore case when searching
 set visualbell             " shut the fuck up
 
-" ---------------------------------------------------------------------------
 "  Strip all trailing whitespace in file
-" ---------------------------------------------------------------------------
-
 function! StripWhitespace ()
     exec ':%s/ \+$//gc'
 endfunction
