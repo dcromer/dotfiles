@@ -8,7 +8,14 @@ endif
 
 " Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'airblade/vim-gitgutter'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'skalnik/vim-vroom'
 call plug#end()
 
 set noswapfile
