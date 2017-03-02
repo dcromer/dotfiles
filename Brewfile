@@ -8,6 +8,7 @@ brew 'coreutils'
 brew 'neovim'
 brew 'tmux'
 
+cask 'spectacle'
 cask 'evernote'
 cask 'iterm2'
 cask 'google-chrome'
