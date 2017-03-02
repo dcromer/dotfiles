@@ -6,6 +6,7 @@ brew 'reattach-to-user-namespace'
 brew 'coreutils'
 brew 'tmux'
 
+cask 'evernote'
 cask 'iterm2'
 cask 'google-chrome'
 cask 'slack'
