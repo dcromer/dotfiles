@@ -10,6 +10,7 @@ brew 'postgres'
 brew 'rbenv'
 brew 'reattach-to-user-namespace'
 brew 'redis'
+brew 'ripgrep'
 brew 'ruby-install'
 brew 'tmux'
 

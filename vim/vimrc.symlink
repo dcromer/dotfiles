@@ -93,9 +93,12 @@ map ,s :call StripWhitespace ()<CR>
 " NERD tree open/close
 autocmd VimEnter * nmap <leader>3 :NERDTreeToggle<CR>
 
-" Ag.vim
-let g:aghighlight=1                  " Highlight search results
-nnoremap <Leader>A :Ag <cword><CR>
+" ack.vim
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep' " Use ripgrep instead of ack if available
+endif
+let g:ackhighlight=1                  " Highlight search results
+nnoremap <Leader>A :Ack! <cword><CR>
 
 " VROOM
 nnoremap <Leader>r :VroomRunTestFile<CR>
