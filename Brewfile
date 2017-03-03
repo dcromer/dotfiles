@@ -9,6 +9,7 @@ brew 'neovim'
 brew 'postgres'
 brew 'rbenv'
 brew 'reattach-to-user-namespace'
+brew 'redis'
 brew 'ruby-install'
 brew 'tmux'
 
