@@ -1,4 +1,4 @@
-" vim-plug (https://github.com/junegunn/vim-plug) settings 
+" vim-plug (https://github.com/junegunn/vim-plug) settings
 " Automatically install vim-plug and run PlugInstall if vim-plug not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -16,11 +16,17 @@ Plug 'scrooloose/nerdtree'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'skalnik/vim-vroom'
+Plug 'MarcWeber/vim-addon-mw-utils' " Required by vim-snipmate
+Plug 'tomtom/tlib_vim'              " Required by vim-snipmate
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'mattn/emmet-vim'
+Plug 'kchmck/vim-coffee-script'
 call plug#end()
 
 set noswapfile
 
-"  Text Formatting 
+"  Text Formatting
 set autoindent             " automatic indent new lines
 set smartindent            " be smart about it
 inoremap # X<BS>#
@@ -68,13 +74,13 @@ set nolazyredraw           " turn off lazy redraw
 set number                 " line numbers
 set wildmenu               " turn on wild menu
 set wildmode=list:longest,full
+set wildignore+=*/tmp/*
 set ch=2                   " command line height
 set backspace=2            " allow backspacing over everything in insert mode
 set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
-
 
 " Visual Cues
 set showmatch              " brackets/braces that is
@@ -89,6 +95,12 @@ function! StripWhitespace ()
     exec ':%s/ \+$//gc'
 endfunction
 map ,s :call StripWhitespace ()<CR>
+
+" OS Copy paste
+map <Leader>y "+y
+map <Leader>Y "+Y
+map <Leader>p "+p
+map <Leader>P "+P
 
 " NERD tree open/close
 autocmd VimEnter * nmap <leader>3 :NERDTreeToggle<CR>
@@ -107,3 +119,4 @@ nnoremap <Leader>l :VroomRunLastTest<CR>
 
 " Syntastic
 let g:syntastic_ruby_checkers = ["mri", "rubocop"]
+let g:ruby_indent_assignment_style = 'variable'
