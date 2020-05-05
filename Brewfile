@@ -13,6 +13,7 @@ brew 'ripgrep'
 brew 'ruby-install'
 brew 'tmux'
 
+cask 'basecamp'
 cask 'cyberduck'
 cask 'spectacle'
 cask 'evernote'
