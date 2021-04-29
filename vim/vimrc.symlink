@@ -11,11 +11,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dense-analysis/ale'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb' " Used by vim-fugitive
+Plug 'tpope/vim-eunuch'
 Plug 'skalnik/vim-vroom'
+Plug 'benmills/vimux'
 Plug 'MarcWeber/vim-addon-mw-utils' " Required by vim-snipmate
 Plug 'tomtom/tlib_vim'              " Required by vim-snipmate
 Plug 'garbas/vim-snipmate'
@@ -112,10 +116,19 @@ endif
 let g:ackhighlight=1                  " Highlight search results
 nnoremap <Leader>A :Ack! <cword><CR>
 
+" Vimux
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
+map <Leader>vs :VimuxInterruptRunner<CR>
+let g:VimuxHeight = "33" " 33% of screen
+
 " VROOM
 nnoremap <Leader>r :VroomRunTestFile<CR>
 nnoremap <Leader>R :VroomRunNearestTest<CR>
 nnoremap <Leader>l :VroomRunLastTest<CR>
+let g:vroom_use_vimux=1
+let g:vroom_test_unit_command="rails test "
 
 " Syntastic
 let g:syntastic_ruby_checkers = ["mri", "rubocop"]
