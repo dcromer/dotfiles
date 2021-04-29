@@ -43,3 +43,9 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # my bins
 export PATH="$HOME/bin:$PATH"
+
+# pyenv
+eval "$(pyenv init -)"
+
+# terraform autocomplete - move this
+complete -o nospace -C /usr/local/bin/terraform terraform
