@@ -15,7 +15,9 @@ then
 fi
 
 export EDITOR=vim
-bindkey -e
+# vi-mode
+bindkey -v
+
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
