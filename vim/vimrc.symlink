@@ -94,6 +94,10 @@ set laststatus=2           " always show the status line
 set ignorecase             " ignore case when searching
 set visualbell             " shut the fuck up
 
+" Windows
+set splitbelow
+set splitright
+
 "  Strip all trailing whitespace in file
 function! StripWhitespace ()
     exec ':%s/ \+$//gc'
