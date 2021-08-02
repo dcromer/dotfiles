@@ -3,6 +3,8 @@
 log/*.log
 tmp/**
 node_modules/
+__pycache__
+*.pyc
 .sass-cache
 .ruby-version
 .rbenv-gemsets
