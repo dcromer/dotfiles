@@ -13,8 +13,8 @@ bind k select-pane -U
 bind h select-pane -L
 bind l select-pane -R
 
-bind-key copy-mode-vi v begin-selection
-bind-key copy-mode-vi y copy-pipe "reattach-to-user-namespace pbcopy"
+bind-key -Tcopy-mode-vi v begin-selection
+bind-key -Tcopy-mode-vi y copy-pipe "reattach-to-user-namespace pbcopy"
 
 bind -r J resize-pane -D 5
 bind -r K resize-pane -U 5
