@@ -28,9 +28,6 @@ autoload -U +X bashcompinit && bashcompinit
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # AWS CLI autocompletion
 source /usr/local/share/zsh/site-functions/_aws
 
@@ -43,9 +40,6 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # my bins
 export PATH="$HOME/bin:$PATH"
-
-# pyenv
-eval "$(pyenv init -)"
 
 # terraform autocomplete - move this
 complete -o nospace -C /usr/local/bin/terraform terraform
