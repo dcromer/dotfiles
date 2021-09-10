@@ -40,6 +40,16 @@ need_push () {
   fi
 }
 
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+kube_ps1_prompt(){
+  if $(which kube_ps1 &> /dev/null)
+  then
+    kube_ps1
+    else
+      echo ""
+  fi
+}
+
 rb_prompt(){
   if $(which rbenv &> /dev/null)
   then
@@ -72,7 +82,7 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(kube_ps1_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
 }
