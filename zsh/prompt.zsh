@@ -40,7 +40,7 @@ need_push () {
   fi
 }
 
-source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
 kube_ps1_prompt(){
   if $(which kube_ps1 &> /dev/null)
   then
