@@ -1,5 +1,5 @@
 # Enable pbcopy and goodness.
-set -g default-command "reattach-to-user-namespace -l zsh"
+# set -g default-command "reattach-to-user-namespace -l zsh"
 
 # Leader
 unbind C-b
