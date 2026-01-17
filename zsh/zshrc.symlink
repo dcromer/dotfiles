@@ -28,9 +28,6 @@ autoload -U +X bashcompinit && bashcompinit
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
 
-# AWS CLI autocompletion
-source /usr/local/share/zsh/site-functions/_aws
-
 #direnv
 eval "$(direnv hook zsh)"
 
@@ -38,12 +35,6 @@ eval "$(direnv hook zsh)"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-# my bins
+# more bins
 export PATH="$HOME/bin:$PATH"
-
-# terraform autocomplete - move this
-complete -o nospace -C /usr/local/bin/terraform terraform
-
-###start-marker|{"name":"orcsource","description":"Allows Outreach specific shell hooks"}
-source "$HOME/.outreach/outreachrc.sh"
-###end-marker
+export PATH="$HOME/.local/bin:$PATH"
