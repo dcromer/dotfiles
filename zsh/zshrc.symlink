@@ -28,13 +28,20 @@ autoload -U +X bashcompinit && bashcompinit
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.zsh) source $config_file
 
-#direnv
-eval "$(direnv hook zsh)"
+# direnv
+if command -v direnv &> /dev/null; then
+  eval "$(direnv hook zsh)"
+fi
 
-# coreutils
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+# coreutils (macOS Homebrew - skip on Linux)
+if [[ -d "/usr/local/opt/coreutils/libexec/gnubin" ]]; then
+  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH:-}"
+fi
 
 # more bins
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# brain alias
+alias brain='clear && cd ~/brain && claude'
